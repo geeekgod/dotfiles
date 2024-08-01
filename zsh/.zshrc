@@ -144,4 +144,11 @@ export PATH=$ANDROID_NDK_HOME:$PATH
 export PATH="/opt/homebrew/opt/icu4c/bin:$PATH"
 export PATH="/opt/homebrew/opt/icu4c/sbin:$PATH"
 export PATH="$HOME/.poetry/bin:$PATH"
-# export PATH="/opt/homebrew/opt/llvm/bin:$PATH"
+
+# pnpm
+export PNPM_HOME="/Users/thisisrishabh22/Library/pnpm"
+case ":$PATH:" in
+  *":$PNPM_HOME:"*) ;;
+  *) export PATH="$PNPM_HOME:$PATH" ;;
+esac
+# pnpm end
