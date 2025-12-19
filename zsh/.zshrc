@@ -103,7 +103,7 @@ source $ZSH/oh-my-zsh.sh
 # Example aliases
 # alias zshconfig="mate ~/.zshrc"
 # alias ohmyzsh="mate ~/.oh-my-zsh"
-alias python=/usr/bin/python3
+# alias python=/usr/bin/python3
 # Load NVM
 [[ -s $HOME/.nvm/nvm.sh ]] && . $HOME/.nvm/nvm.sh
 
@@ -152,3 +152,20 @@ case ":$PATH:" in
   *) export PATH="$PNPM_HOME:$PATH" ;;
 esac
 # pnpm end
+
+# Added by LM Studio CLI (lms)
+export PATH="$PATH:/Users/thisisrishabh22/.lmstudio/bin"
+export HF_HOME=/Volumes/ext_ssd/HuggingFace/Cache
+
+# The next line updates PATH for the Google Cloud SDK.
+if [ -f '/Users/thisisrishabh22/google-cloud-sdk/path.zsh.inc' ]; then . '/Users/thisisrishabh22/google-cloud-sdk/path.zsh.inc'; fi
+
+# The next line enables shell command completion for gcloud.
+if [ -f '/Users/thisisrishabh22/google-cloud-sdk/completion.zsh.inc' ]; then . '/Users/thisisrishabh22/google-cloud-sdk/completion.zsh.inc'; fi
+
+export PYENV_ROOT="$HOME/.pyenv"
+[[ -d $PYENV_ROOT/bin ]] && export PATH="$PYENV_ROOT/bin:$PATH"
+eval "$(pyenv init - zsh)"
+
+. "$HOME/.local/bin/env"
+export PATH="$HOME/.composer_gitghost/vendor/bin:$PATH"
